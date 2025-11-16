@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>RAG-Librarian</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <div class="page-wrapper">
+    <div class="vertical-banner">
+      <div class="icon-list-left">
+        <img src="{{ url_for('static', filename='images/Pythagorean.svg')}}" />
+        <img src="{{ url_for('static', filename='images/Athena.jpg')}}" />
+      </div>
+    </div>
+    <div class="container">
+      <h1 class="page-title">Socrates - A RAG librarian</h1>
+
+      <div id="socrates-container">
+        <img id="socrates-image" src="{{ url_for('static', filename='images/socrates.png')}}" class="visible" />
+      </div>
+
+
+      <div id="answer-box" class="answer-box">Welcome. I am Socrates, here to answer your history questions.</div>
+
+      <div class="input-container">
+        <input id="user-input" type="text" placeholder="Ask librarian..." autocomplete="off" />
+        <button id="send-btn">Send</button>
+      </div>
+    </div>
+
+    <div class="vertical-banner">
+      <div class="icon-list-right">
+        <img src="{{ url_for('static', filename='images/sphinx.png')}}" />
+        <img src="{{ url_for('static', filename='images/Napoleon.jpg')}}" />
+      </div>
+    </div>
+  </div>
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

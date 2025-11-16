@@ -1,0 +1,152 @@
+/* General page layout */
+body {
+  background-color: #f8f4ed;
+  font-family: "Garamond", serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.page-wrapper {
+  display: flex;
+  justify-content: space-between;   /* centers main content between logos */
+  align-items: flex-start;   /* aligns everything to the top */
+  gap: 100px;                 /* space between logos and main content */
+  width: 100%;
+  padding: 200px;
+}
+
+/* Main container */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 10px;  /* adds space below image container */
+  gap: 15px; 
+}
+
+.page-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+    color: #333;
+}
+
+#socrates-container {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+#socrates-container img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;       /* maintain aspect ratio, scale to fit */
+  transform: translate(-50%, -50%); /* center the image inside container */
+  transition: opacity 0.3s ease;
+}
+
+#socrates-image {
+  object-fit: contain; /* show whole JPG */
+}
+
+/* When hidden, move it below and make it invisible */
+.hidden {
+  opacity: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* When visible, bring to front */
+.visible {
+  opacity: 1;
+  z-index: 1;
+}
+
+/* Answer box */
+.answer-box {
+  background-color: #fffaf0;
+  border: 2px solid #c2a86d;
+  border-radius: 12px;
+  padding: 20px;
+  font-size: 20px;
+  color: #333;
+  min-height: 120px;
+  min-width: 400px;
+  max-width: 800px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  white-space: pre-wrap;
+  transition: background-color 0.3s ease;
+}
+
+/* Input and send button */
+.input-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.vertical-banner {
+  margin-top: 150px;
+  width: 200px; /* width of banner */
+  height: 600px; /* same as image container */
+  overflow: hidden;
+  position: relative;
+}
+
+.icon-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 0;
+}
+
+
+.icon-list-left img {
+  width: 200px;  /* icon width */
+  margin: 40px 0;
+}
+
+.icon-list-right img {
+  width: 200px;  /* icon width */
+  margin: 10px 0;
+}
+
+#user-input {
+  width: 75%;
+  padding: 12px;
+  font-size: 18px;
+  border: 2px solid #c2a86d;
+  border-radius: 8px;
+  outline: none;
+}
+
+#user-input:focus {
+  border-color: #a78b4a;
+}
+
+#send-btn {
+  padding: 12px 20px;
+  font-size: 18px;
+  background-color: #c2a86d;
+  border: none;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+#send-btn:hover {
+  background-color: #a78b4a;
+}
